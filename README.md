@@ -1,16 +1,25 @@
-# Write Code Cardápio
+# Write Code - Cardápio
 
-# Tecnologias e Recursos
+## Tecnologias e Recursos
 - Kotlin
 - Android Nativo
 - IDE Andoid Studio
 
-# Protótipo do Projeto
+## Protótipo do Projeto
 - [Layout Figma](https://www.figma.com/file/py6KoE82DMHnx0uFjdHfex/write-code-irede?type=design&node-id=0%3A1&mode=design&t=7DVdDEAnn91dGl2C-1)
 
-# Iamgens 
+<p align="center">
+    <apan align="center">
+      <img alt="Happy" src="img/layout.png" height="80%" width="64%">
+    </apan>
+</p>
 
-## Sobre os requisitos do projeto
+
+## Demonstração 
+
+...
+
+## Sobre o projeto
 - O cliente faz o pedido através do aplicativo que o
 estabelecimento fornece, sendo a internet do local com acesso
 gratuito e a senha o número da mesa em que o cliente se
