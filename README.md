@@ -17,7 +17,14 @@
 
 ## Demonstração 
 
-...
+<p align="center">
+    <apan align="center">
+      <img alt="Happy" src="img/mobile_1.gif" height="80%" width="40%">
+    </apan>    
+    <apan align="center">
+      <img alt="Happy" src="img/mobile_2.gif" height="80%" width="40%">
+    </apan>
+</p>
 
 ## Sobre o projeto
 - O cliente faz o pedido através do aplicativo que o
