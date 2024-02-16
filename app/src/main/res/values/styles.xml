@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ButtonChipSelected">
+        <item name="android:background">@drawable/button_chip_selected</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:paddingHorizontal">18dp</item>
+        <item name="android:foreground">?attr/selectableItemBackgroundBorderless</item>
+
+    </style>
+    <style name="ButtonChip">
+        <item name="android:background">@drawable/button_chip</item>
+        <item name="android:textColor">@color/red_custom</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:paddingHorizontal">18dp</item>
+        <item name="android:foreground">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+    <style name="TitleSession">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">42dp</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">@color/brown_500</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginVertical">10dp</item>
+        <item name="android:drawableBottom">@drawable/line</item>
+    </style>
+
+    <style name="ImgDishes">
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">120dp</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:contentDescription">"imagem do prato"</item>
+    </style>
+    <style name="CardTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/brown_400</item>
+    </style>
+    <style name="CardDescription">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/brown_400</item>
+    </style>
+    <style name="IdDish">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/brown_400</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_marginTop">4dp</item>
+    </style>
+    <style name="CardPrice">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">44dp</item>
+        <item name="android:textColor">@color/red_custom</item>
+    </style>
+    <style name="Time">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:paddingHorizontal">8dp</item>
+        <item name="android:paddingVertical">8dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="AddComment">
+        <item name="android:background">@drawable/button_add_comment</item>
+        <item name="android:textColor">@color/brown_400</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:foreground">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:drawableStart">@drawable/add_comment</item>
+        <item name="android:drawablePadding">6dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+
+    <style name="CardView" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MaterialCardView.Cut</item>
+    </style>
+
+
+    <style name="ShapeAppearanceOverlay.MaterialCardView.Cut" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeBottomRight">1000dp</item>
+        <item name="cornerSizeBottomLeft">1000dp</item>
+    </style>
+</resources>
