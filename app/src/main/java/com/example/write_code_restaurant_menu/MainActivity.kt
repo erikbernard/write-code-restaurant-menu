@@ -23,14 +23,14 @@ class MainActivity : AppCompatActivity(), DialogListener {
 //    private val orderList: MutableList1<Pair<String, Double>> = mutableListOf()
     private val orderList: MutableList1<ShoppingBagItem> = mutableListOf()
     private var cardlist: List<CardItem> = listOf()
-    @SuppressLint("SetTextI18n")
+//    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         //  botões da sessões
         binding.buttonAllSections.setOnClickListener {
-            scrollVerticalToView(binding.textSectionAppetizerList)
+            scrollVerticalToView(binding.textSectionHighlightDayList)
             applyStyleToButton(binding.buttonAllSections)
             removeStyleFromButtons(binding.buttonAllSections)
         }
@@ -94,8 +94,11 @@ class MainActivity : AppCompatActivity(), DialogListener {
             val buttonAddComment = binding.root.findViewById<AppCompatButton>(i.buttonAddComment)
             val dish = MenuPrices.getByIndex(index)
             index++
-            textId.text = "ID: ${dish?.id}"
-            textPrice.text = "R$ ${dish?.price.toString().replace(".",",0")}"
+            if(dish != null){
+                textId.text = "ID: ${dish.id}"
+                textPrice.text = "R$ ${dish.price.toString().replace(".",",0")}"
+            }
+
             buttonAddComment.setOnClickListener {
                 val dialog = AddDialogFragment(buttonAddComment)
                 dialog.show(supportFragmentManager, dialog.tag)
@@ -186,7 +189,13 @@ class MainActivity : AppCompatActivity(), DialogListener {
             it.toString()
         }
         if(viewCheckbox.isChecked){
-            orderList.add(ShoppingBagItem(id, price, comment))
+            val item = ShoppingBagItem(id, price, comment)
+            val index = orderList.indexOf(item)
+            if (index != -1){
+                orderList[index] = item
+            }else {
+                orderList.add((item))
+            }
         }else {
             orderList.removeIf { it.id == id }
         }
@@ -232,15 +241,7 @@ class MainActivity : AppCompatActivity(), DialogListener {
                 buttonIncrease = R.id.img_button_increase_1,
                 buttonDecrease = R.id.img_button_decrease_1,
             ),
-            CardItem(
-                textIdDish = R.id.text_id_dish_2,
-                textQuantity = R.id.text_quantity_2,
-                textPrice = R.id.text_card_price_2,
-                checkboxCard = R.id.checkbox_card_2,
-                buttonAddComment = R.id.button_add_comment_2,
-                buttonIncrease = R.id.img_button_increase_2,
-                buttonDecrease = R.id.img_button_decrease_2
-            ),
+
             CardItem(
                 textIdDish = R.id.text_id_dish_3,
                 textQuantity = R.id.text_quantity_3,
@@ -259,15 +260,7 @@ class MainActivity : AppCompatActivity(), DialogListener {
                 buttonIncrease = R.id.img_button_increase_4,
                 buttonDecrease = R.id.img_button_decrease_4
             ),
-            CardItem(
-                textIdDish = R.id.text_id_dish_5,
-                textQuantity = R.id.text_quantity_5,
-                textPrice = R.id.text_card_price_5,
-                checkboxCard = R.id.checkbox_card_5,
-                buttonAddComment = R.id.button_add_comment_5,
-                buttonIncrease = R.id.img_button_increase_5,
-                buttonDecrease = R.id.img_button_decrease_5
-            ),
+
             CardItem(
                 textIdDish = R.id.text_id_dish_6,
                 textQuantity = R.id.text_quantity_6,
@@ -366,6 +359,24 @@ class MainActivity : AppCompatActivity(), DialogListener {
                 buttonAddComment = R.id.button_add_comment_16,
                 buttonIncrease = R.id.img_button_increase_16,
                 buttonDecrease = R.id.img_button_decrease_16
+            ),
+            CardItem(
+                textIdDish = R.id.text_id_dish_highlight_day_1,
+                textQuantity = R.id.text_quantity_highlight_day_1,
+                textPrice = R.id.text_card_price_highlight_day_1,
+                checkboxCard = R.id.checkbox_card_highlight_day_1,
+                buttonAddComment = R.id.button_add_comment_highlight_day_1,
+                buttonIncrease = R.id.img_button_increase_highlight_day_1,
+                buttonDecrease = R.id.img_button_decrease_highlight_day_1
+            ),
+            CardItem(
+                textIdDish = R.id.text_id_dish_highlight_day_2,
+                textQuantity = R.id.text_quantity_highlight_day_2,
+                textPrice = R.id.text_card_price_highlight_day_2,
+                checkboxCard = R.id.checkbox_card_highlight_day_2,
+                buttonAddComment = R.id.button_add_comment_highlight_day_2,
+                buttonIncrease = R.id.img_button_increase_highlight_day_2,
+                buttonDecrease = R.id.img_button_decrease_highlight_day_2
             ),
         )
     }

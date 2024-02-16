@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
+    android:orientation="vertical"
     >
     <LinearLayout
         android:id="@+id/card_header"
@@ -37,19 +38,18 @@
             android:textStyle="bold" />
 
     </LinearLayout>
-
     <HorizontalScrollView
         android:id="@+id/horizontal_scroll_layout_section"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/card_header"
+        android:scrollIndicators="none"
         >
         <LinearLayout
             android:id="@+id/layout_section"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            tools:context=".MainActivity"
             android:paddingVertical="10dp"
             >
 
@@ -87,7 +87,6 @@
                 />
         </LinearLayout>
     </HorizontalScrollView>
-
     <ScrollView
         android:id="@+id/products_scrollview"
         android:layout_width="match_parent"
@@ -101,6 +100,279 @@
             android:orientation="vertical"
             android:layout_marginHorizontal="16dp"
             >
+            <TextView
+                style="@style/TitleSession"
+                android:id="@+id/text_section__highlight_day_list"
+                android:text="@string/text_section_highlight_day"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <androidx.cardview.widget.CardView
+                    background="@color/white"
+                    android:id="@+id/card_highlight_day_1"
+                    android:layout_gravity="center"
+                    android:layout_width="180dp"
+                    android:layout_height="310dp"
+                    card_view:cardCornerRadius="8dp"
+                    >
+                    <RelativeLayout
+                        android:id="@+id/card_layout_highlight_day_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                        <ImageView
+                            android:id="@+id/img_dishes_highlight_day_1"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_below="@+id/checkbox_card_highlight_day_1"
+                            android:layout_centerHorizontal="true"
+                            android:src="@mipmap/food_12"
+                            android:paddingVertical="8dp"
+                            />
+                        <TextView
+                            style="@style/CardTitle"
+                            android:id="@+id/text_card_title_highlight_day_1"
+                            android:text="@string/text_view_food_12"
+                            android:layout_below="@id/img_dishes_highlight_day_1"
+                            android:paddingHorizontal="16dp"
+
+                            />
+                        <TextView
+                            style="@style/CardDescription"
+                            android:id="@+id/text_card_description_highlight_day_1"
+                            android:text="@string/text_view_description_food_12"
+                            android:layout_below="@+id/text_card_title_highlight_day_1"
+                            android:paddingHorizontal="16dp"
+
+                            />
+                        <TextView
+                            style="@style/IdDish"
+                            android:id="@+id/text_id_dish_highlight_day_1"
+                            android:text="@string/text_id_dish_highlight_day_1"
+                            android:layout_below="@+id/text_card_description_highlight_day_1"
+                            android:paddingHorizontal="16dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/text_card_price_highlight_day_1"
+                            style="@style/CardPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_above="@id/button_add_comment_highlight_day_1"
+                            android:text="@string/text_card_price_highlight_day_1"
+                            android:textSize="14sp"
+                            android:layout_marginBottom="6dp"
+                            android:paddingHorizontal="16dp"
+                            />
+                        <LinearLayout
+                            android:id="@+id/layout_counter_highlight_day_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            >
+
+                            <androidx.appcompat.widget.AppCompatImageButton
+                                android:id="@+id/img_button_decrease_highlight_day_1"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:background="@drawable/button_styleless"
+                                android:foreground="?attr/selectableItemBackground"
+                                android:rotation="90"
+                                android:src="@drawable/arrow_circle"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <TextView
+                                android:id="@+id/text_quantity_highlight_day_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/text_quantity"
+                                android:textSize="20sp"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                />
+
+                            <androidx.appcompat.widget.AppCompatImageButton
+                                android:id="@+id/img_button_increase_highlight_day_1"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_marginEnd="2dp"
+                                android:background="@drawable/button_styleless"
+                                android:foreground="?attr/selectableItemBackground"
+                                android:rotation="-90"
+                                android:src="@drawable/arrow_circle"
+                                tools:ignore="SpeakableTextPresentCheck" />
+                        </LinearLayout>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/button_add_comment_highlight_day_1"
+                            style="@style/AddComment"
+                            android:textSize="12sp"
+                            android:text="@string/text_button_add_comment"
+                            tools:ignore="TouchTargetSizeCheck"
+                            android:paddingHorizontal="10dp"
+                            android:layout_marginBottom="8dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/text_time_highlight_day_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="28dp"
+                            android:layout_above="@id/button_add_comment_highlight_day_1"
+                            android:layout_alignParentEnd="true"
+                            android:background="@drawable/button_time_medium"
+                            android:padding="8dp"
+                            android:text="12:00 min"
+                            android:textColor="@color/white"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            card_view:drawableLeftCompat="@drawable/time"
+                            android:layout_marginRight="16dp"
+                            />
+                        <CheckBox
+                            android:id="@+id/checkbox_card_highlight_day_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="-12dp"
+                            />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    background="@color/white"
+                    android:id="@+id/card_highlight_day_2"
+                    android:layout_gravity="center"
+                    android:layout_width="180dp"
+                    android:layout_height="310dp"
+                    card_view:cardCornerRadius="8dp"
+                    android:layout_marginLeft="16dp"
+                    >
+                    <RelativeLayout
+                        android:id="@+id/card_layout_highlight_day_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                        <ImageView
+                            android:id="@+id/img_dishes_highlight_day_2"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_below="@+id/checkbox_card_highlight_day_2"
+                            android:layout_centerHorizontal="true"
+                            android:src="@mipmap/food_5"
+                            android:paddingVertical="8dp"
+                            />
+                        <TextView
+                            style="@style/CardTitle"
+                            android:id="@+id/text_card_title_highlight_day_2"
+                            android:text="@string/text_view_food_5"
+                            android:layout_below="@id/img_dishes_highlight_day_2"
+                            android:paddingHorizontal="16dp"
+
+                            />
+                        <TextView
+                            style="@style/CardDescription"
+                            android:id="@+id/text_card_description_highlight_day_2"
+                            android:text="@string/text_view_description_food_5"
+                            android:layout_below="@+id/text_card_title_highlight_day_2"
+                            android:paddingHorizontal="16dp"
+
+                            />
+                        <TextView
+                            style="@style/IdDish"
+                            android:id="@+id/text_id_dish_highlight_day_2"
+                            android:text="@string/text_id_dish"
+                            android:layout_below="@+id/text_card_description_highlight_day_2"
+                            android:paddingHorizontal="16dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/text_card_price_highlight_day_2"
+                            style="@style/CardPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_above="@id/button_add_comment_highlight_day_2"
+                            android:text="@string/text_card_price"
+                            android:textSize="14sp"
+                            android:layout_marginBottom="6dp"
+                            android:paddingHorizontal="16dp"
+                            />
+                        <LinearLayout
+                            android:id="@+id/layout_counter_highlight_day_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            >
+
+                            <androidx.appcompat.widget.AppCompatImageButton
+                                android:id="@+id/img_button_decrease_highlight_day_2"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:background="@drawable/button_styleless"
+                                android:foreground="?attr/selectableItemBackground"
+                                android:rotation="90"
+                                android:src="@drawable/arrow_circle"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <TextView
+                                android:id="@+id/text_quantity_highlight_day_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/text_quantity"
+                                android:textSize="20sp"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                />
+
+                            <androidx.appcompat.widget.AppCompatImageButton
+                                android:id="@+id/img_button_increase_highlight_day_2"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_marginEnd="2dp"
+                                android:background="@drawable/button_styleless"
+                                android:foreground="?attr/selectableItemBackground"
+                                android:rotation="-90"
+                                android:src="@drawable/arrow_circle"
+                                tools:ignore="SpeakableTextPresentCheck" />
+                        </LinearLayout>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/button_add_comment_highlight_day_2"
+                            style="@style/AddComment"
+                            android:textSize="12sp"
+                            android:text="@string/text_button_add_comment"
+                            tools:ignore="TouchTargetSizeCheck"
+                            android:paddingHorizontal="10dp"
+                            android:layout_marginBottom="8dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/text_time_highlight_day_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="28dp"
+                            android:layout_above="@id/button_add_comment_highlight_day_2"
+                            android:layout_alignParentEnd="true"
+                            android:background="@drawable/button_time_fast"
+                            android:padding="8dp"
+                            android:text="@string/text_time"
+                            android:textColor="@color/white"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            card_view:drawableLeftCompat="@drawable/time"
+                            android:layout_marginRight="16dp"
+                            />
+                        <CheckBox
+                            android:id="@+id/checkbox_card_highlight_day_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="-12dp"
+                            />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
             <TextView
                 style="@style/TitleSession"
                 android:id="@+id/text_section_appetizer_list"
@@ -230,127 +502,7 @@
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                background="@color/white"
-                android:id="@+id/card_item_2"
-                android:layout_gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="184dp"
-                card_view:cardCornerRadius="8dp"
-                android:layout_marginBottom="10dp"
-                >
-                <RelativeLayout
-                    android:id="@+id/card_layout_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="184dp"
-                    android:padding="10dp"
-                    >
-                    <ImageView
-                        style="@style/ImgDishes"
-                        android:id="@+id/img_dishes_2"
-                        android:src="@mipmap/food_2"/>
-                    <TextView
-                        style="@style/CardTitle"
-                        android:id="@+id/text_card_title_2"
-                        android:text="@string/text_view_food_2"
-                        android:layout_toStartOf="@+id/checkbox_card_2"
-                        android:layout_toEndOf="@+id/img_dishes_2"
-                        />
 
-                    <TextView
-                        style="@style/CardDescription"
-                        android:id="@+id/text_card_description_2"
-                        android:text="@string/text_view_description_food_2"
-                        android:layout_below="@id/text_card_title_2"
-                        android:layout_toStartOf="@+id/checkbox_card_2"
-                        android:layout_toEndOf="@+id/img_dishes_2"
-                        />
-
-                    <TextView
-                        style="@style/IdDish"
-                        android:tag="id"
-                        android:id="@+id/text_id_dish_2"
-                        android:text="@string/text_id_dish"
-                        android:layout_toEndOf="@+id/img_dishes_2"
-                        android:layout_below="@+id/text_card_description_2"
-                        />
-
-                    <TextView
-                        style="@style/CardPrice"
-                        android:tag="price"
-                        android:id="@+id/text_card_price_2"
-                        android:text="@string/text_card_price"
-                        android:layout_below="@id/text_card_description_2"
-                        android:layout_toStartOf="@+id/layout_counter_2"
-                        android:layout_toEndOf="@+id/img_dishes_2"
-                        />
-
-                    <LinearLayout
-                        android:id="@+id/layout_counter_2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/checkbox_card_2"
-                        android:layout_alignEnd="@id/checkbox_card_2"
-                        android:layout_marginTop="34dp"
-                        >
-
-                        <androidx.appcompat.widget.AppCompatImageButton
-                            android:id="@+id/img_button_decrease_2"
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:background="@drawable/button_styleless"
-                            android:foreground="?attr/selectableItemBackground"
-                            android:rotation="90"
-                            android:src="@drawable/arrow_circle"
-                            tools:ignore="SpeakableTextPresentCheck" />
-
-                        <TextView
-                            android:id="@+id/text_quantity_2"
-                            android:tag="quantity"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text="@string/text_quantity"
-                            android:textSize="20sp"
-                            android:gravity="center"
-                            android:textStyle="bold"
-                            />
-
-                        <androidx.appcompat.widget.AppCompatImageButton
-                            android:id="@+id/img_button_increase_2"
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_marginEnd="2dp"
-                            android:background="@drawable/button_styleless"
-                            android:foreground="?attr/selectableItemBackground"
-                            android:rotation="-90"
-                            android:src="@drawable/arrow_circle"
-
-                            tools:ignore="SpeakableTextPresentCheck" />
-                    </LinearLayout>
-
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/button_add_comment_2"
-                        style="@style/AddComment"
-                        android:text="@string/text_button_add_comment"
-                        tools:ignore="TouchTargetSizeCheck" />
-                    <TextView
-                        style="@style/Time"
-                        android:id="@+id/text_time_2"
-                        android:text="12:00 min"
-                        card_view:drawableLeftCompat="@drawable/time"
-                        android:background="@drawable/button_time_medium"
-                        />
-                    <CheckBox
-                        android:tag="checkbox"
-                        android:id="@+id/checkbox_card_2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginEnd="-12dp"
-                        android:layout_marginTop="-12dp"
-                        />
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                 background="@color/white"
                 android:id="@+id/card_item_3"
@@ -597,125 +749,6 @@
                 android:id="@+id/text_section_main_dishes_list"
                 android:text="@string/text_section_main_dishes"
                 />
-            <androidx.cardview.widget.CardView
-                background="@color/white"
-                android:id="@+id/card_item_5"
-                android:layout_gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="184dp"
-                card_view:cardCornerRadius="8dp"
-                android:layout_marginBottom="10dp"
-                >
-                <RelativeLayout
-                    android:id="@+id/card_layout_5"
-                    android:layout_width="match_parent"
-                    android:layout_height="184dp"
-                    android:padding="10dp"
-                    >
-                    <ImageView
-                        style="@style/ImgDishes"
-                        android:id="@+id/img_dishes_5"
-                        android:src="@mipmap/food_1"/>
-                    <TextView
-                        style="@style/CardTitle"
-                        android:id="@+id/text_card_title_5"
-                        android:text="@string/text_view_food_1"
-                        android:layout_toStartOf="@+id/checkbox_card_5"
-                        android:layout_toEndOf="@+id/img_dishes_5"
-                        />
-
-                    <TextView
-                        style="@style/CardDescription"
-                        android:id="@+id/text_card_description_5"
-                        android:text="@string/text_view_description_food_5"
-                        android:layout_below="@id/text_card_title_1"
-                        android:layout_toStartOf="@+id/checkbox_card_5"
-                        android:layout_toEndOf="@+id/img_dishes_5"
-                        />
-
-                    <TextView
-                        style="@style/IdDish"
-                        android:id="@+id/text_id_dish_5"
-                        android:text="@string/text_id_dish"
-                        android:layout_toEndOf="@+id/img_dishes_5"
-                        android:layout_below="@+id/text_card_description_5"
-                        />
-
-                    <TextView
-                        style="@style/CardPrice"
-                        android:id="@+id/text_card_price_5"
-                        android:text="@string/text_card_price"
-                        android:layout_below="@id/text_card_description_5"
-                        android:layout_toStartOf="@+id/layout_counter_5"
-                        android:layout_toEndOf="@+id/img_dishes_5"
-                        android:layout_marginTop="30dp"
-                        />
-
-                    <LinearLayout
-                        android:id="@+id/layout_counter_5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/checkbox_card_5"
-                        android:layout_alignEnd="@id/checkbox_card_5"
-                        android:layout_marginTop="34dp"
-                        >
-
-                        <androidx.appcompat.widget.AppCompatImageButton
-                            android:id="@+id/img_button_decrease_5"
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:rotation="90"
-                            android:src="@drawable/arrow_circle"
-                            android:background="@drawable/button_styleless"
-                            android:foreground="?attr/selectableItemBackground"
-                            />
-
-                        <TextView
-                            android:id="@+id/text_quantity_5"
-                            android:tag="quantity"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text="@string/text_quantity"
-                            android:textSize="20sp"
-                            android:gravity="center"
-                            android:textStyle="bold"
-                            />
-
-                        <androidx.appcompat.widget.AppCompatImageButton
-                            android:id="@+id/img_button_increase_5"
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_marginEnd="2dp"
-                            android:background="@drawable/button_styleless"
-                            android:foreground="?attr/selectableItemBackground"
-                            android:rotation="-90"
-                            android:src="@drawable/arrow_circle"
-
-                            tools:ignore="SpeakableTextPresentCheck" />
-                    </LinearLayout>
-                    <androidx.appcompat.widget.AppCompatButton
-                        style="@style/AddComment"
-                        android:id="@+id/button_add_comment_5"
-                        android:text="@string/text_button_add_comment"
-                        />
-                    <TextView
-                        style="@style/Time"
-                        android:id="@+id/text_time_5"
-                        android:text="25:00 min"
-                        card_view:drawableLeftCompat="@drawable/time"
-                        android:background="@drawable/button_time_late"
-                        />
-                    <CheckBox
-                        android:tag="checkbox"
-                        android:id="@+id/checkbox_card_5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginEnd="-12dp"
-                        android:layout_marginTop="-12dp"
-                        />
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                 background="@color/white"
                 android:id="@+id/card_item_6"

@@ -22,14 +22,14 @@
     <string name="text_total_bill">Total: R$ 0,00</string>
     <string name="text_view_food_5">Batata Frita</string>
     <string name="text_view_description_food_5">batata, molho temperado</string>
-    <string name="text_view_food_2">Porção de Nuggets</string>
-    <string name="text_view_description_food_2">Nuggets de frango, Molho, alface</string>
+<!--    <string name="text_view_food_2">Porção de Nuggets</string>-->
+<!--    <string name="text_view_description_food_2">Nuggets de frango, Molho, alface</string>-->
     <string name="text_view_food_3">Hamburger com Batata</string>
     <string name="text_view_description_food_3">batata, tomate, queijo, burguer, bacon, salada</string>
     <string name="text_view_food_4">Espetos Especial de carne</string>
     <string name="text_view_description_food_4">bovino, salada, tomate, queijo</string>
-    <string name="text_view_food_1">Curry de Camarão</string>
-    <string name="text_view_description_food_1">camarão com molho, salsinha, camarão, verduras</string>
+<!--    <string name="text_view_food_1">Curry de Camarão</string>-->
+<!--    <string name="text_view_description_food_1">camarão com molho, salsinha, camarão, verduras</string>-->
     <string name="text_view_food_6">Salada com Temperos Naturais</string>
     <string name="text_view_description_food_6">alface, tomate, cebola, salsa, louro</string>
     <string name="text_view_food_9">Carne Grelhada com Macaxeira</string>
@@ -52,4 +52,7 @@
     <string name="text_view_description_food_17">500 ml</string>
     <string name="text_view_food_15">Suco Natural</string>
     <string name="text_view_description_food_15">copo 300ml</string>
+    <string name="text_section_highlight_day">Destaque do Dia</string>
+    <string name="text_id_dish_highlight_day_1">ID: 1011</string>
+    <string name="text_card_price_highlight_day_1">R$ 12,00</string>
 </resources>

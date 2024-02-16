@@ -1,11 +1,9 @@
 package com.example.write_code_restaurant_menu
 
 enum class MenuPrices(val id: String, val price: Double) {
-    DISH_1("1001", 12.00),
-    DISH_2("1002", 16.00),
+    DISH_1("1001", 10.00),
     DISH_3("1003", 14.00),
     DISH_4("1004", 22.00),
-    DISH_5("1005", 37.00),
     DISH_6("1006", 21.00),
     DISH_7("1007", 42.00),
     DISH_8("1008", 48.00),
